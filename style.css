@@ -168,7 +168,6 @@ nav li a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 2em; */
   position: fixed;
   z-index: 999;
   top: 0;
@@ -184,14 +183,17 @@ nav li a:hover::after {
   max-width: 300px;
   border-radius: 10px;
   box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.443);
-  animation: pop 0.2s both;
+  animation: pop 0.3s both;
 }
 
 @keyframes pop {
-  from {
+  0% {
     transform: scale(0.3);
   }
-  to {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
     transform: scale((1));
   }
 }
